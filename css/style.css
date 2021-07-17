@@ -172,7 +172,7 @@ header .menu-input {
   width: 240px;
   color: #fff;
 }
-@media (max-width: 768px) {
+@media (max-width: 570px) {
   header .menu-itens {
     display: none;
   }
@@ -219,6 +219,32 @@ header .menu-input {
   color: #586069;
   font-weight: 300;
   margin-top: 5px;
+}
+.content .repositories {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .repositories .repositories-content {
+  width: 1016px;
+}
+@media (max-width: 768px) {
+  .content .repositories .repositories-content {
+    width: 500px;
+  }
+}
+.content .repositories .repositories-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .repositories .repositories-list li .repository {
+  padding: 19px 200px 85px 20px;
+  width: 250px;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  margin: 18px;
+}
+.content .repositories .repositories-list li .repository-name {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

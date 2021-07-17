@@ -43,7 +43,7 @@ header {
         color: #fff;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 570px) {
         .menu-itens {
             display: none;
         }
@@ -98,16 +98,35 @@ header {
     }
 
     .repositories {
-        &-content {
+        display: flex;
+        flex-wrap: wrap;
 
-            .repositories-list {
+        .repositories-content {
+            width: 1016px;
 
-                li {
-                    .repository {
-                        &-name {}
+            @media (max-width: 768px) {
+                width: 500px;
+            }
+        }
 
-                        &-description {}
+        .repositories-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+
+                .repository {
+                    padding: 19px 200px 85px 20px;
+                    width: 250px;
+                    border: 1px solid #e1e4e8;
+                    border-radius: 10px;
+                    margin: 18px;
+
+                    &-name {
+                        display: block;
                     }
+
+                    &-description {}
                 }
             }
         }
