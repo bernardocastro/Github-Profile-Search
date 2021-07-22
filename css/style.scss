@@ -6,15 +6,15 @@ header {
     display: flex;
     font-size: 14px;
     font-weight: bold;
-    justify-content: flex-start;
-    padding: 0 20px;
-    margin: 0px;
-    width: 100%;
     height: 62px;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0 20px;
+    width: 100%;
 
     .menu-logo {
-        width: 35px;
         margin-right: 15px;
+        width: 35px;
     }
 
     .menu-list {
@@ -22,8 +22,8 @@ header {
     }
 
     .menu-itens {
-        list-style: none;
         align-items: flex-start;
+        list-style: none;
         margin-right: 5px;
     }
 
@@ -37,10 +37,14 @@ header {
         background: none;
         border: 1px solid #444d56;
         border-radius: 5px;
-        padding: 0 10px;
-        min-height: 28px;
-        width: 240px;
         color: #fff;
+        min-height: 28px;
+        padding: 0 10px;
+        width: 240px;
+    }
+
+    .menu-input:focus {
+        outline: none;
     }
 
     @media (max-width: 570px) {
@@ -54,55 +58,62 @@ header {
     }
 }
 
+main {}
+
 .content {
     display: flex;
-    justify-content: space-between;
-    width: 768px;
     margin: 30px auto;
+    justify-content: center;
 
     @media (max-width: 768px) {
+        align-items: center;
+        flex-direction: column;
         min-width: unset;
         width: 100%;
-        flex-direction: column;
-        align-items: center;
     }
 
     .profile-info {
         display: flex;
         flex-direction: column;
+        padding-left: 30px;
 
         .user-img {
-            width: 260px;
             height: auto;
+            width: 260px;
+            display: none;
 
             img {
-                width: 100%;
-                height: 100%;
                 border-radius: 50%;
+                height: 100%;
+                width: 100%;
             }
         }
 
         .user-name {
+            color: #24292e;
             font-size: 26px;
             font-weight: 600;
-            color: #24292e;
             margin-top: 20px;
         }
 
         .user-nickname {
-            font-size: 20px;
             color: #586069;
+            font-size: 20px;
             font-weight: 300;
             margin-top: 5px;
         }
     }
 
     .repositories {
-        display: flex;
-        flex-wrap: wrap;
+
+        max-width: 1140px;
+
+        .repositories-title {
+            display: none;
+            margin-left: 20px;
+        }
 
         .repositories-content {
-            width: 1016px;
 
             @media (max-width: 768px) {
                 width: 500px;
@@ -116,19 +127,59 @@ header {
             li {
 
                 .repository {
-                    padding: 19px 200px 85px 20px;
-                    width: 250px;
                     border: 1px solid #e1e4e8;
                     border-radius: 10px;
                     margin: 18px;
+                    padding: 15px;
+                    width: 425px;
+                    height: 105px;
 
                     &-name {
+                        color: #0366d6;
                         display: block;
+                        font-weight: 600;
+                        padding-bottom: 10px;
+
                     }
 
-                    &-description {}
+                    &-description {
+                        color: #586069;
+                        font-size: 14px;
+                    }
                 }
             }
         }
+    }
+}
+
+.search-placeholder {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: url("/assets/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 90%;
+
+
+    .placeholder-img {
+        margin-top: 30px;
+    }
+
+    .placeholder-baloon-img {
+        width: 280px;
+        height: 150px;
+        margin-left: 28px;
+        margin-top: -50px;
+    }
+
+    .placeholder-text {
+        position: absolute;
+        margin-left: 226px;
+        margin-top: -52px;
+        font-size: 20px;
+
     }
 }

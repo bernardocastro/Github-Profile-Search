@@ -19,6 +19,9 @@ $(document).ready(function () {
         $('.user-name-js').text(response.name)
         $('.user-nickname-js').text(response.login)
         $('.user-img-js').attr("src", response.avatar_url)
+        $(".user-img").show();
+        $(".repositories-title").show();
+        $('.search-placeholder').hide();
 
         getUserRepos(response.repos_url);
     }
