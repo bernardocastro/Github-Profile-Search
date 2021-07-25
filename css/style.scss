@@ -177,14 +177,14 @@ main {}
     background-attachment: fixed;
     background-size: 100% 90%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 355px) {
         width: 360px;
     }
 
     .placeholder-img {
         margin-top: 30px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 355px) {
             margin-left: 30px;
         }
 
@@ -196,7 +196,7 @@ main {}
         margin-left: 28px;
         margin-top: -50px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 355px) {
             margin-right: 128px;
         }
 
@@ -208,10 +208,30 @@ main {}
         margin-top: -52px;
         font-size: 20px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 355px) {
             margin-right: 118px;
         }
+    }
+}
 
+.error {
+    text-align: center;
+    display: none;
 
+    .error-icon {
+        width: 35px;
+        margin-top: 40px;
+    }
+
+    h1 {
+       font-weight: bold;
+       font-size: 20px;
+       text-align: center;
+       margin-top: 10px;
+       margin-bottom: 5px;
+    }
+
+    span {
+        font-size: 15px;
     }
 }

@@ -8,11 +8,18 @@ $(document).ready(function () {
     function searchUser(user) {
         const url = `https://api.github.com/users/${user}`;
         $.ajax({
-            url: url,
-            type: 'GET'
-        }).done(response => {
-            insertData(response);
-        });
+                url: url,
+                type: 'GET',
+
+            }).done(response => {
+                insertData(response);
+            })
+
+            .fail(function (xhr, status, error) {
+                showError()
+            })
+
+
     }
 
     function insertData(response) {
@@ -51,4 +58,11 @@ $(document).ready(function () {
 
         list.append(listItens);
     }
+
+    function showError() {
+        $('.error').show();
+        $('.content').hide();
+        $('.search-placeholder').hide();
+    }
+
 })
