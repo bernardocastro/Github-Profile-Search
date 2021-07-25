@@ -7,5 +7,5 @@ Built using the [GitHub API](api.github.com).
 
 ## Check It out!
 
-Access using [this link](https://bernardocastro.github.io/Github-Profile-Search/)!
+Access using this link!
 
