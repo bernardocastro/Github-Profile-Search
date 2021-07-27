@@ -8,16 +8,21 @@ $(document).ready(function () {
     function searchUser(user) {
         const url = `https://api.github.com/users/${user}`;
         $.ajax({
-                url: url,
-                type: 'GET',
+            url: url,
+            type: 'GET',
 
-            }).done(response => {
-                insertData(response);
-            })
+        }).done(response => {
+            insertData(response);
+            console.log('oi')
+        })
 
-            .fail(function (xhr, status, error) {
-                showError()
-            })
+        //.fail(function (xhr, status, error) {
+        //  showError()
+        // })
+
+        $(document).ajaxError(() => {
+            showError()
+        });
 
 
     }
@@ -26,9 +31,11 @@ $(document).ready(function () {
         $('.user-name-js').text(response.name)
         $('.user-nickname-js').text(response.login)
         $('.user-img-js').attr("src", response.avatar_url)
-        $(".user-img").show();
-        $(".repositories-title").show();
+        $('.user-img').show();
+        $('.repositories-title').show();
         $('.search-placeholder').hide();
+        $('.error').hide();
+        $('.content').show();
 
         getUserRepos(response.repos_url);
     }
