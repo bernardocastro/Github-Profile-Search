@@ -326,6 +326,7 @@ header .menu-input:focus {
 .error {
   text-align: center;
   display: none;
+  margin: 10px;
 }
 .error .error-icon {
   width: 35px;
@@ -340,6 +341,29 @@ header .menu-input:focus {
 }
 .error span {
   font-size: 15px;
+}
+
+.loader {
+  animation: spin 0.7s linear infinite;
+  border: 6px solid #f3f3f3;
+  /* Light grey */
+  border-top: 6px solid #586069;
+  /* Blue */
+  border-radius: 50%;
+  display: none;
+  margin: 0 auto;
+  height: 40px;
+  width: 40px;
+  margin-top: 70px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

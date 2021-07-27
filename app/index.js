@@ -2,6 +2,10 @@ $(document).ready(function () {
     $('.menu-input-js').keypress(function (event) {
         if (event.keyCode === 13) {
             searchUser(event.currentTarget.value);
+            $('.loader').show();
+            $('.search-placeholder').hide();
+            $('.content').hide();
+            $('.error').hide();
         }
     });
 
@@ -13,15 +17,11 @@ $(document).ready(function () {
 
         }).done(response => {
             insertData(response);
-            console.log('oi')
         })
-
-        //.fail(function (xhr, status, error) {
-        //  showError()
-        // })
 
         $(document).ajaxError(() => {
             showError()
+            $('.loader').hide();
         });
 
 
@@ -36,6 +36,7 @@ $(document).ready(function () {
         $('.search-placeholder').hide();
         $('.error').hide();
         $('.content').show();
+        $('.loader').hide();
 
         getUserRepos(response.repos_url);
     }
